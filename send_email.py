@@ -4,11 +4,10 @@ Referensi : https://gist.github.com/zita9999/8d7306c2d9312a5e974a466877b813c3
 '''
 
 #Importing Packages
-import smtplib, ssl
+import smtplib
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
-from email import encoders
 
 #Membuat List Email Penerima
 file = open("receiver_list.txt", "r")
@@ -31,6 +30,6 @@ msg['To'] = ','.join(receivers)
 
 #CMengubungan ke Server SMTP Gmail
 s = smtplib.SMTP_SSL(host = 'smtp.gmail.com', port = 465)
-s.login(user = sender, password = 'password')
+s.login(user = sender, password = 'Dh4ny53cur1ty')
 s.sendmail(sender, receivers, msg.as_string())
 s.quit()
