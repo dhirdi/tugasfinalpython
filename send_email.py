@@ -3,9 +3,11 @@ MODULE KIRIM EMAIL MELALUI PYTHON
 Referensi : https://gist.github.com/zita9999/8d7306c2d9312a5e974a466877b813c3
 '''
 
-#Importing Packages
+#Import modul
 import smtplib
 from email.mime.text import MIMEText
+
+#Kalo mau nambahin Attachment pake modul ini
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 
