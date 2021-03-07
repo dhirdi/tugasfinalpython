@@ -15,7 +15,7 @@ from email.mime.multipart import MIMEMultipart
 file = open("receiver_list.txt", "r")
 content = file.read()
 content_list = content.split(" \n")
-print(content_list)
+print("Kirim email ke " + content_list)
 
 #Pengirim dan Penerima
 sender = 'achmad.ramdhany.irdiansyah@gmail.com'
