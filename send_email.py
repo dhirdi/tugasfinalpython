@@ -15,7 +15,8 @@ from email.mime.multipart import MIMEMultipart
 file = open("receiver_list.txt", "r")
 content = file.read()
 content_list = content.split(" \n")
-print("Kirim email ke " + content_list)
+print("Kirim email ke:")
+print(content_list)
 
 #Pengirim dan Penerima
 sender = 'achmad.ramdhany.irdiansyah@gmail.com'
@@ -32,6 +33,6 @@ msg['To'] = ','.join(receivers)
 
 #CMengubungan ke Server SMTP Gmail
 s = smtplib.SMTP_SSL(host = 'smtp.gmail.com', port = 465)
-s.login(user = sender, password = 'Dh4ny53cur1ty')
+s.login(user = sender, password = input("Masukkan Password anda: "))
 s.sendmail(sender, receivers, msg.as_string())
 s.quit()
